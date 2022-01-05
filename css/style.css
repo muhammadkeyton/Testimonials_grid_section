@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --moderate-violet:hsl(263, 55%, 52%);
+    --light-grayish-blue:hsl(210, 46%, 95%);
+    --dark-grayish-blue:hsl(217, 19%, 35%);
+    --light-gray:hsl(0, 0%, 81%);
+}
+
+.verified-second-testimonial{
+    color:var(--light-grayish-blue);
+    font-weight:lighter;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color:var(--light-grayish-blue);
+    padding:20px;
+}
+
+
+.card{
+    border-radius: 10px;
+    max-width: 27rem;
+    margin:0 auto;
+}
+
+.card-body{
+    padding:2rem 2.8rem;
+    
+}
+
+/* daniel */
+.daniel{
+    background-color:var(--moderate-violet);
+    color:#fff;
+    position:relative;
+}
+
+/* quotation marks on daniels testimonial */
+.daniel::before{
+    content:"";
+    background: url("/images/bg-pattern-quotation.svg") no-repeat;
+    background-size:9rem;
+    color:#fff;
+    opacity:0.3;
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:262px;
+    
+    
+}
+
+
+
+.graduate{
+    display:flex;
+    align-items: center;
+    gap:1.5rem;
+    margin-bottom:20px;
+}
+
+.testimonial-img{
+    width:13%;
+    border-radius: 50%;
+    border: 2px solid hsl(264, 28%, 67%);
+}
+
+.graduate-name{
+    margin:0;
+    margin-top:4px;
+    font-weight:lighter;
+}
+
+.verified{
+    font-weight: lighter;
+    font-size:14px;
+}
+
+.first-testimonial{
+    font-size:1.6rem;
+    font-weight: 600;
+}
+
+.second-testimonial{
+    font-size:1rem;
+}
+
+/* jonathan */
+.jonathan{
+    color:white;
+    background-color: var(--dark-grayish-blue);
+}
+.jeanette-jonathan-img{
+    width:13%;
+    border-radius: 50%;
+}
+
+.jonathan-testimonial{
+    color:var(--light-gray);
+}
+
+.verified-jonathan{
+    color:var(--light-gray);
+}
+
+
+/* jeanette */
+.verified-jeanette{
+    color:var(--dark-grayish-blue);
+}
+
+.jeanette-testimonial{
+    color:var(--dark-grayish-blue);
+}
+
+
+/* patrick */
+.patrick{
+    color:#fff;
+    background-color:hsl(219, 29%, 14%);
+}
+
+
+
+
