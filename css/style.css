@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+
+/* general styling */
+
 :root{
     --moderate-violet:hsl(263, 55%, 52%);
     --light-grayish-blue:hsl(210, 46%, 95%);
@@ -17,14 +20,49 @@
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color:var(--light-grayish-blue);
-    padding:20px;
+    padding:30px;
+
 }
 
 
+/* grid layout */
+.testimonials-container{
+    display:grid;
+    gap:1.5rem;
+    grid-auto-columns:1fr;
+    grid-template-areas:
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira";
+}
+
+.card:nth-child(1){
+    grid-area: daniel;
+}
+.card:nth-child(2){
+    grid-area:jonathan;
+}
+.card:nth-child(3){
+    grid-area: jeanette;
+}
+.card:nth-child(4){
+    grid-area:patrick;
+}
+.card:nth-child(5){
+    grid-area:kira;
+}
+
+
+
+
+
+
+/* card general styles */
 .card{
     border-radius: 10px;
-    max-width: 27rem;
-    margin:0 auto;
+    /* max-width: 27rem; */
 }
 
 .card-body{
@@ -32,29 +70,19 @@ body{
     
 }
 
+
+
+/* individual card styling */
+
+
 /* daniel */
 .daniel{
     background-color:var(--moderate-violet);
     color:#fff;
     position:relative;
+    background: var(--moderate-violet) url("../images/bg-pattern-quotation.svg") no-repeat 92% 0%;
+    background-size:28%;
 }
-
-/* quotation marks on daniels testimonial */
-.daniel::before{
-    content:"";
-    background: url("/images/bg-pattern-quotation.svg") no-repeat;
-    background-size:9rem;
-    color:#fff;
-    opacity:0.3;
-    height:100%;
-    width:100%;
-    position:absolute;
-    left:262px;
-    
-    
-}
-
-
 
 .graduate{
     display:flex;
@@ -125,5 +153,20 @@ body{
 }
 
 
+/* 
+grid layout on large screens */
+@media only screen and (min-width:1100px) {
+    .testimonials-container{
+        grid-template-areas:
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+    }
+ 
+    .daniel{
+     background: var(--moderate-violet) url("../images/bg-pattern-quotation.svg") no-repeat 92% 0%;
+     background-size:23%; 
+    }
+ 
+ }
 
 
